@@ -7,7 +7,7 @@ function setup() {
 
 function draw() {
 
-  background(100);
+  background(100)
 
   switch (state) {
 
