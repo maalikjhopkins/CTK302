@@ -6,7 +6,7 @@ function preload() {
 
 function setup() {
   createCanvas(500, 500);
-  song1 = play();
+  song1.play();
 }
 
 function draw() {
