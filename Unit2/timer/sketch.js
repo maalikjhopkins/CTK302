@@ -12,6 +12,7 @@ function draw() {
   switch (state) {
 
     case 0:
+      background("red");
       text("0", 100, 100);
       timer++;
       if (timer > 3*60) {
@@ -21,6 +22,7 @@ function draw() {
       break;
 
     case 1:
+      background("orange");
       text("1", 100, 100);
       timer++;
       if (timer > 3*60) {
@@ -30,6 +32,7 @@ function draw() {
       break;
 
     case 2:
+      background("yellow");
       text("2", 100, 100);
       timer++;
       if (timer > 3*60) {
