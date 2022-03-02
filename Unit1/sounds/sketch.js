@@ -13,6 +13,6 @@ function draw() {
 
 }
 
-function touchStarted() {
+function mouseReleased() {
   getAudioContext().resume();
 }
