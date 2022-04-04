@@ -1,14 +1,19 @@
-let myCar1;
+let cars = [];
 
 function setup() {
   createCanvas(500, 500);
-  myCar1 = new Car();
+
+  for (let i = 0; i < 20; i++) {
+    cars.push(new Car());
+}
 }
 
 function draw() {
-  background("grey");
-  myCar1.display();
-  myCar1.move();
+  background("gray");
+  for (let i = 0; i < cars.length; i++) {
+  cars[i].display();
+  cars[i].move();
+}
 }
 
 class Car {

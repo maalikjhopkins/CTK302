@@ -2,7 +2,7 @@ let myCar1;
 
 function setup() {
   createCanvas(500, 500);
-  myCar = new Car();
+  myCar1 = new Car();
 }
 
 function draw() {
