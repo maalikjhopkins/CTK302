@@ -46,6 +46,7 @@ function draw() {
   switch (state) {
     case 0:
 
+
       textFont(font1);
       background('green');
       image(egg2, 450, 150, 500, 500);
@@ -62,31 +63,52 @@ function draw() {
       text("(Devour them all!)",  900, 450);
       break;
 
-
-
     case 1:
+
+
+      textFont(font1);
+      background('green');
+      textSize(64);
+      fill("yellow");
+      text("Select Difficulty", 550, 100);
+      textSize(40);
+      fill("blue");
+      rect(675, 310, 130, 50);
+      fill("black");
+      text("Easy", 675, 350);
+      fill("yellow");
+      rect(675, 385, 130, 50);
+      fill("black");
+      text("Normal", 675, 425);
+      fill("red");
+      rect(675, 460, 130, 50);
+      fill("black");
+      text("Hard", 675, 500);
+    break;
+
+    case 2:
       game();
       timer++;
       if (duckSize > 1000) {
 
-        state = 2;
+        state = 3;
       }
       //timer++;
 
     //  if (timer > maxTimer * 60) {
       //  timer = 0;
-      //  state = 3;
+      //  state = 4;
       //}
       break;
 
-    case 2:
+    case 3:
       background('green');
       fill('blue');
       text("DuckBird has outgrown the ecosystem and will soon conquer mankind!", 200, 200);
       image(egg1, 500, 300, 300, 300);
       break;
 
-    case 3:
+    case 4:
       background('green');
       fill('blue');
       text("The wrath of DuckBird has been stopped. The ecosystem is saved!", 400, 200);
@@ -124,7 +146,7 @@ function game() {
           duckSize += 50;
         sound.play();
       } else {
-        state = 3;
+        state = 4;
         sound.play();
         // go to lose screen
       }
@@ -140,7 +162,7 @@ function game() {
         //duckSize += cars[i].sizeInc;
         sound.play();
       } else {
-        state = 3;
+        state = 4;
         sound.play();
         // go to lose screen
       }
@@ -150,7 +172,7 @@ function game() {
   }
 
   if (cars.length == 0) { // they won
-    state = 2;
+    state = 3;
   }
 
   //frog
@@ -262,12 +284,24 @@ function mouseReleased() {
       state = 1;
       break;
 
-    case 2: // win state
+    case 1:
+    if ((mouseX > 675) && (mouseX < 805) && (mouseY > 310) && (mouseY < 360)) {
+      state++;
+    }
+    if ((mouseX > 675) && (mouseX < 805) && (mouseY > 385) && (mouseY < 435)) {
+      state++;
+    }
+    if ((mouseX > 675) && (mouseX < 805) && (mouseY > 460) && (mouseY < 510)) {
+      state++;
+    }
+      break;
+
+    case 3: // win state
       state = 0;
       resetTheGame();
       break;
 
-    case 3: //lose state
+    case 4: //lose state
       state = 0;
       resetTheGame();
       break;
