@@ -96,7 +96,12 @@ function draw() {
   text("y = " + y, 25, 170);
   text("z = " + z, 25, 190);
 
-
+// if acceleration got very big, clear array and respawn
+if (x > 5) {
+  cars = []; // clear the array first
+  for (var i = 0; i < 40; i++) {
+    cars.push(new Car());
+}
 }
 
 function deviceShaken() {
