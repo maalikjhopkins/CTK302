@@ -2,7 +2,7 @@
 Make sure you turn on orientation lock on your iPhone or Android device. */
 
 let alpha = 0, beta = 0 , gamma = 0; // gyroscope variablers
-let bunnyImage;
+let booImage;
 let xPosition = 0;
 let yPosition = 0;
 let x = 0, y = 0, z = 0 ; // accelerometer data
@@ -12,9 +12,9 @@ function setup() {
 
   createCanvas(windowWidth, windowHeight);
 
+  robotol = loadFont("assets/Roboto-Light.ttf");
 
-
-  bunnyImage = loadImage("assets/bunny.jpg");
+  booImage = loadImage("assets/boo.png");
   imageMode(CENTER);
   rectMode(CENTER);
 
@@ -36,7 +36,7 @@ function draw() {
 
   rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
 
-  image(bunnyImage, 0, 0, 500, 500);
+  image(booImage, 0, 0, 500, 500);
   // rect(0, 0, 100, 100) ;
   pop();
 
@@ -60,9 +60,10 @@ function draw() {
   // Text that makes CTK type in the background
   fill('white');
   noStroke();
-  textSize(300);
+  textFont(robotol);
+  textSize(100);
   textAlign(CENTER);
-  text("ctk", width / 2, height / 2);
+  text("BOO", width / 2, height / 2);
 
 }
 
