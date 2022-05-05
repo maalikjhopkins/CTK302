@@ -61,9 +61,12 @@ function draw() {
 
       // thermometer
       y = map(temperature, -10, 110, 5, height-10);
+      z = map(humidity, -10, 100, 5, height-10);
       // rect(width-30, height-10, 10, -temperature);
       fill("red");
       rect(width-30, height-10, 10, -y);
+      fill("blue");
+      rect(width-50, height-10, 10, -z);
 
 
       // cloud
