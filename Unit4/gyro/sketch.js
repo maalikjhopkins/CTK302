@@ -58,7 +58,7 @@ function draw() {
   // text("z = " + z.toFixed(4), 25, 190);
 
   // Text that makes CTK type in the background
-  fill('white');
+  fill('blue');
   noStroke();
   textFont(robotol);
   textSize(100);
