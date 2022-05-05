@@ -52,7 +52,7 @@ class Bubble {
     this.marvel = marvel;
     this.name = name;
     this.pos = createVector(random(width), random(height));
-    this.vel = createVector(random(2, 5), 0);
+    this.vel = createVector(random(2, 5), random(1, 3));
   }
 
   display() {
@@ -68,6 +68,7 @@ class Bubble {
 
     this.pos.add(this.vel) ;
     if (this.pos.x > width) this.pos.x = 0 ;
+    if (this.pos.y > height) this.pos.y = 0;
 
   }
 
